@@ -7,5 +7,21 @@ module.exports = {
   output:{
     path : DIST_DIR,
     filename: "bundle.js"
+  },
+  module:{
+    rules:[
+      {
+        test: /\.js$/,
+        use:['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test:/\.css$/,
+        use: ['css-loader','style-loader']
+      }
+    ]
+  },
+  devServer:{
+    contentBase: DIST_DIR
   }
-}
+};
