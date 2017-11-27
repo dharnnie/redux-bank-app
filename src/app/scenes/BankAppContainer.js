@@ -19,7 +19,7 @@ class BankAppContainer extends Component {
   /*
   Initializes an empty account state with zero balance
   as soon as component mounts 0  |  returns an subscribtion object
-  we then save to this.unsubscribe 
+  we then save to this.unsubscribe .
   */
   componentDidMount(){
     this.unsubscribe = bankStore.subscribe(()=>
